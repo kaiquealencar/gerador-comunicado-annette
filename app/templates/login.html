@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atestado Disciplina</title>
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+</head>
+<body>    
+{% include "_flash.html" %}
+<div class="card-container">
+    <div class="card">
+        <form method="POST">
+            <label>Usuário:</label>
+            <input type="text" name="usuario" required>
+            <label>Senha:</label>
+            <input type="password" name="senha" required>
+            <button type="submit" class="btn">Entrar</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

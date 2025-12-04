@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    overflow: hidden;
+}
+
+h2{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-size: 28px;
+    font-weight: 700;   
+    color: #2c3e50;
+        
+}
+
+.form-group{
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input{
+    width: 500px;
+    padding: 8px;
+    border-radius: 6pc;
+    border: 1px solid #ccc;
+}
+
+.form-group select{
+    width: 500;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: #fff;
+    text-align: Left;
+}
+
+.form-group select.select-anoserie{
+    width: 100px;
+}
+
+
+
+
+card form input[type="text"],
+
+.card form input[type=text]::focus{
+    border-color: #1abc9c;
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+    background-color: #fff;
+}
+
+.card form input[type=text]::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100vh;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    width: 400px;
+    padding: 25px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:has(.card-form){
+     width: 565px;
+}
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+
+.card form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.card form input{
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px
+}
+
+.card form label{
+    font-weight: 600;       
+    color: #2c3e50;        
+    font-size: 15px;  
+}
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #1abc9c;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+    border: none;
+}
+
+
+.btn:hover {
+    background-color: #16a085;
+    transform: translateY(-2px);
+}
+
+.card-table {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.table-wrapper {
+    max-height: 300px;
+    overflow-y: auto;
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+}
+
+table th {
+    background-color: #f4f6f8;
+    color: #34495e;
+}
+
+
+.flash-message{
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  font-family: sans-serif;
+}
+
+.flash-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.flash-message.danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.flash-message.danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.flash-message.warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+@media (max-width: 900px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card, .card-table {
+        width: 95%;
+    }
+}

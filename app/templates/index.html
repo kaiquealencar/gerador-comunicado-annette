@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+</head>
+<body>
+    <h2> Comunicado Disciplinar </h2>
+    <div class="card-container">
+        <div class="card">
+            <div class="card-form">
+                <form action="{{url_for('gerar_pdf')}}" method="POST">
+                    <div class="form-group">
+                        <label for="aluno"> Aluno: </label>
+                        <input type="text" name="aluno" id="aluno" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ano-serie">Ano/Série:</label>
+                        <select name="ano-serie" id="ano-serie" class="select-anoserie">
+                            <option value="selecione"> Ano/Série </option>
+                            {% for item in range(1, 13) %}
+                                {% if item in range(1, 10) %}
+                                    <option value="{{ item }} ª Série ">{{ item }} ª Série</option>
+                                {% elif item == 10 %}
+                                    <option value="1º Médio">1º Médio</option>
+                                {% elif item == 11 %}
+                                    <option value="2º Médio">2º Médio</option>
+                                {% else %}
+                                    <option value="3º Médio">3º Médio</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>   
+                    </div>                    
+                    <div class="form-group">
+                        <label for="motivo"> Motivo: </label>
+                        <select for="motivo" name="motivo" id="motivo">
+                            <option value="selecione" style="text-align:center;">--------------------------- selecione ------------------------ </option>
+                            <option value="1">Está brincando nas aulas – desatentos</option>
+                            <option value="2">Não está cumprindo as tarefas escolares</option>
+                            <option value="3">Vem à escola sem material</option>
+                            <option value="4">Está desrespeitando funcionários da escola: professores, inspetores e 
+                            direção</option>
+                            <option value="5">Chega sempre após o sinal – atrasado</option>
+                            <option value="6">Não fica dentro de sala de aula. Faz uso do celular dentro de sala de aula</option>
+                            <option value="7">Faz brincadeiras inadequadas com os colegas</option>
+                            <option value="8">Faz uso de material alheio dos colegas para escrever palavras obscenas</option>
+                            <option value="9">Não segue as regras propostas pelo professor</option>
+                        </select>
+                        
+                        <div class="form-group">
+                        <label for="professor"> professor: </label>
+                        <input type="text" name="professor" id="professor" required>
+                        </div>
+                        <div class="form-group">
+                        <label for="disciplina"> Disciplina: </label>
+                            <input type="text" name="disciplina" id="disciplina" required>
+                        </div>
+
+                        
+                    </div>
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn" style="text-align:center;"> Gerar PDF </button>
+                    </div>
+                    <div style"text-align: left;">
+                        <a href="{{url_for('rota_logout')}}"> Sair </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
