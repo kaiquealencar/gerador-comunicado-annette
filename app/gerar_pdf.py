@@ -32,15 +32,15 @@ class GerarPDf:
 
         dados_motivo = self.motivo(numero_motivo)
 
-        self.escrever_pdf("(    )", 70, 275)
-        self.escrever_pdf("(    )", 70, 300)
-        self.escrever_pdf("(    )", 70, 324)
-        self.escrever_pdf("(    )", 70, 348)
-        self.escrever_pdf("(    )", 70, 382)
-        self.escrever_pdf("(    )", 70, 403)
-        self.escrever_pdf("(    )", 70, 424)
-        self.escrever_pdf("(    )", 70, 448)
-        self.escrever_pdf("(    )", 70, 470)
+        self.escrever_pdf("(    )", 70, 285)
+        self.escrever_pdf("(    )", 70, 310)
+        self.escrever_pdf("(    )", 70, 334)
+        self.escrever_pdf("(    )", 70, 358)
+        self.escrever_pdf("(    )", 70, 392)
+        self.escrever_pdf("(    )", 70, 413)
+        self.escrever_pdf("(    )", 70, 434)
+        self.escrever_pdf("(    )", 70, 458)
+        self.escrever_pdf("(    )", 70, 483)
 
         self.escrever_pdf(dados_motivo["texto"], dados_motivo["x"], dados_motivo["y"])
 
@@ -62,23 +62,23 @@ class GerarPDf:
     def motivo(self, motivo):
         match motivo:
             case "1":
-                x, y = 70, 275.0
+                x, y = 70, 285.0
             case "2":
-                x, y = 70, 300.0
+                x, y = 70, 310.0
             case "3":
-                x, y = 70, 324.0                
+                x, y = 70, 334.0                
             case "4":
-                x, y = 70, 348.0
+                x, y = 70, 358.0
             case "5":
-                x, y = 70, 382.0
+                x, y = 70, 392.0
             case "6":
-                x, y = 70, 403.0
+                x, y = 70, 413.0
             case "7":
-                x, y = 70, 424.0
+                x, y = 70, 434.0
             case "8":
-                x, y = 70, 448.0
+                x, y = 70, 458.0
             case "9":
-                x, y = 70, 470.2
+                x, y = 70, 483.2
             
         return  {"texto": "( X ", "x": x, "y": y}
     
