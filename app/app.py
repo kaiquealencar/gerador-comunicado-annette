@@ -1,6 +1,6 @@
 import os
 from flask import Flask, render_template, redirect, request, url_for, session, send_file
-from auth import * 
+from auth import login, logout
 from gerar_pdf import GerarPDf
 from datetime import date
 
